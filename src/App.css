@@ -50,3 +50,28 @@
 .menu .active {
   color: #575502;
 }
+
+.cart-box {
+  position: relative;
+  bottom: 8px;
+}
+
+.cart-img {
+  position: relative;
+  top: 3px;
+}
+
+.container-aboutus {
+  margin-top: 10px;
+  background: #b28228;
+  text-align: center;
+  width: 100vw;
+  height: 25vh;
+}
+
+.container-catalogo {
+  margin-top: 10px;
+  text-align: center;
+  width: 100vw;
+  height: 25vh;
+}

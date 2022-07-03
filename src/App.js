@@ -1,4 +1,6 @@
 import "./App.css";
+import AboutUs from "./components/AboutUs";
+import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -8,6 +10,8 @@ function App() {
         <header className="App-header">
           <NavBar />
         </header>
+        <AboutUs />
+        <ItemListContainer />
       </div>
     </div>
   );

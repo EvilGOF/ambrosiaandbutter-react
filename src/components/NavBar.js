@@ -1,3 +1,5 @@
+import CartWidget from "./CartWidget";
+
 const NavBar = () => {
   return (
     <nav className="navbar">
@@ -21,6 +23,7 @@ const NavBar = () => {
         <li>
           <a href="#">Recipes</a>
         </li>
+        <CartWidget />
       </ul>
     </nav>
   );
