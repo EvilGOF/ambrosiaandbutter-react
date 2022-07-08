@@ -72,6 +72,14 @@
 .container-catalogo {
   margin-top: 10px;
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
   width: 100vw;
   height: 25vh;
+}
+
+.item-count {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
