@@ -1,24 +1,40 @@
 import React from "react";
 import { useState } from "react";
 
-const ItemCount = (props) => {
-  const [num, setNum] = useState(props.initial);
+const ItemCount = ({ initial, stock, onAdd }) => {
+  const [qty, setQty] = useState(initial);
 
-  const stock = props.stock;
-
-  const IncrementarItem = () => {
-    num < stock ? setNum(num + 1) : alert("No hay más stock");
-  };
-
-  const SacarItem = () => {
-    num > 0 ? setNum(num - 1) : alert("No puedes tener menos de 0!");
+  const addProduct = (num) => {
+    setQty(qty + num);
   };
 
   return (
-    <div className="item-count">
-      <button onClick={SacarItem}>-</button>
-      <p>{num}</p>
-      <button onClick={IncrementarItem}>+</button>
+    <div className="count-container">
+      <div className="count-container__contador">
+        <button
+          className="count-container__button"
+          onClick={() => addProduct(-1)}
+          disabled={qty === initial ? true : null}
+        >
+          -
+        </button>
+        <span className="count-container__qty">{qty}</span>
+        <button
+          className="count-container__button"
+          onClick={() => addProduct(+1)}
+          disabled={qty === stock ? true : null}
+        >
+          +
+        </button>
+      </div>
+
+      <button
+        className="button-primary"
+        onClick={() => onAdd(qty)}
+        disabled={stock === 0 ? true : null}
+      >
+        Añadir
+      </button>
     </div>
   );
 };

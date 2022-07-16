@@ -1,14 +1,20 @@
-const Item = (props) => {
+import React from "react";
+import ItemCount from "./ItemCount.js";
+
+const Item = ({ name, thumbnail, price, id, stock, alt }) => {
+  const onAdd = (qty) => {
+    alert(`Has agregado ${qty} items`);
+  };
+
   return (
-    <div className="item-container">
-      <div className="item-card">
-        <img src={props.img} width="200px" height="220px" alt={props.alt}></img>
-        <h5>{props.name}</h5>
-        <p>
-          $<span>{props.price}</span>
-        </p>
-      </div>
-    </div>
+    <article className="product-card">
+      <img className="product-card__image" src={thumbnail} alt={alt} />
+
+      <h3 className="product-card__name">{name}</h3>
+      <span className="product-card__name">${price}</span>
+
+      <ItemCount stock={stock} onAdd={onAdd} initial={1} />
+    </article>
   );
 };
 

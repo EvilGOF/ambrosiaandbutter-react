@@ -69,17 +69,7 @@
   height: 25vh;
 }
 
-.container-catalogo {
-  margin-top: 10px;
-  text-align: center;
+.product-list-container {
   display: flex;
-  justify-content: space-evenly;
-  width: 100vw;
-  height: 25vh;
-}
-
-.item-count {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
+  gap: 45px;
 }
